@@ -1,13 +1,13 @@
 actions:
-    - name: findUsers
-      definition:
-        kind: synchronous
-        handler: http://localhost:3000/findUsers
+  - name: findUsers
+    definition:
+      kind: ""
+      handler: http://localhost:3000/findUsers
 custom_types:
-    enums: []
-    input_objects:
-        - name: SearchInput
-    objects:
-        - name: Location
-        - name: SearchOutput
-    scalars: []
+  enums: []
+  input_objects:
+    - name: SearchInput
+  objects:
+    - name: Location
+    - name: SearchOutput
+  scalars: []

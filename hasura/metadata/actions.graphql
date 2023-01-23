@@ -1,10 +1,16 @@
 type Query {
-  findUsers(arg: SearchInput!): SearchOutput
+  findUsers(
+    arg: SearchInput!
+  ): SearchOutput
+}
+
+input SearchInput {
+  radius: Float!
 }
 
 type Location {
- lat: Float!
- lng: Float!
+  lat: Float!
+  lng: Float!
 }
 
 type SearchOutput {
@@ -14,6 +20,3 @@ type SearchOutput {
   location: Location!
 }
 
-input SearchInput {
-  radius: Float!
-}
