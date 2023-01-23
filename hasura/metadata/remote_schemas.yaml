@@ -4,3 +4,66 @@
     timeout_seconds: 60
     customization: {}
     forward_client_headers: true
+  permissions:
+    - role: guest
+      definition:
+        schema: |
+          schema {
+            query: Query
+            mutation: Mutation
+          }
+          type AuthOutput {
+            error: String
+            token: String
+          }
+          type HealthCheckOutput {
+            status: String
+          }
+          type Mutation {
+            signin(signinInput: SigninInput!): AuthOutput!
+            signup(signupInput: SignupInput!): AuthOutput!
+          }
+          type Query {
+            health: HealthCheckOutput!
+          }
+          input SigninInput {
+            email: String!
+            password: String!
+          }
+          input SignupInput {
+            email: String!
+            firstName: String!
+            lastName: String!
+            password: String!
+          }
+    - role: user
+      definition:
+        schema: |
+          schema {
+            query: Query
+            mutation: Mutation
+          }
+          type AuthOutput {
+            error: String
+            token: String
+          }
+          type HealthCheckOutput {
+            status: String
+          }
+          type Mutation {
+            signin(signinInput: SigninInput!): AuthOutput!
+            signup(signupInput: SignupInput!): AuthOutput!
+          }
+          type Query {
+            health: HealthCheckOutput!
+          }
+          input SigninInput {
+            email: String!
+            password: String!
+          }
+          input SignupInput {
+            email: String!
+            firstName: String!
+            lastName: String!
+            password: String!
+          }

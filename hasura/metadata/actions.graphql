@@ -8,15 +8,11 @@ input SearchInput {
   radius: Float!
 }
 
-type Location {
-  lat: Float!
-  lng: Float!
-}
-
 type SearchOutput {
   firstName: String!
   lastName: String!
   gender: String!
-  location: Location!
+  lat: Float!
+  lng: Float!
 }
 
