@@ -1,0 +1,19 @@
+type Query {
+  findUsers(arg: SearchInput!): SearchOutput
+}
+
+type Location {
+ lat: Float!
+ lng: Float!
+}
+
+type SearchOutput {
+  firstName: String!
+  lastName: String!
+  gender: String!
+  location: Location!
+}
+
+input SearchInput {
+  radius: Float!
+}
