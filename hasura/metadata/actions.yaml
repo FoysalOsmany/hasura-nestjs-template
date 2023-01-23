@@ -3,6 +3,8 @@ actions:
     definition:
       kind: ""
       handler: http://server:3000/findUsers
+    permissions:
+      - role: user
 custom_types:
   enums: []
   input_objects:

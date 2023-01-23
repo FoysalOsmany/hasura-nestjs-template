@@ -1,7 +1,7 @@
 type Query {
   findUsers(
     arg: SearchInput!
-  ): SearchOutput
+  ): [SearchOutput]
 }
 
 input SearchInput {
