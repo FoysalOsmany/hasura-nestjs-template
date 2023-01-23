@@ -19,3 +19,6 @@ $ yarn hasura metadata apply
 
 # application should be available in http://localhost:8000
 ```
+
+## Notes
+postgres extensions cube and earthdistance should be enabled
